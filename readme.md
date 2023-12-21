@@ -18,6 +18,6 @@ TODO:
 
 
 Requirements:
-
+- python
 - numpy
 - scipy (for ndimage)
