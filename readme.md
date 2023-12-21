@@ -1,4 +1,4 @@
-We model fluid flow using [constant-density incompressible navier-stokes (convective)](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations#Incompressible_flow)
+Model fluid flow using [constant-density incompressible navier-stokes (convective)](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations#Incompressible_flow)
 
 ```math
 \frac{\partial u}{\partial t} + (u ⋅ ∇)u - (\frac{\mu}{\rho_{0}}) * ∇^{2}u = -∇(\frac{P}{\rho_{0}}) + g 
