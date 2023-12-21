@@ -31,6 +31,7 @@ def evolve_flow_2d(boundary_conditions_mask, boundary_conditions_values,
                     dt (float scalar): time step duration to evolve the flow
             Returns:
                     flow (float numpy array) [M x N x 2]: resulting state of the flow field. flow[i,j,:2] are the two components of the flow field vector at location (i,j) at a single time step.
+                    P (float numpy array) [M x N]: resulting pressure field. flow[i,j] is the pressure at location (i,j) at the resulting time step.
     '''
     nu = mu / rho_0
     flow[boundary_conditions_mask] = boundary_conditions_values[boundary_conditions_mask]
@@ -72,6 +73,7 @@ def evolve_flow_3d(boundary_conditions_mask, boundary_conditions_values,
                     dt (float scalar): time step duration to evolve the flow
             Returns:
                 flow (float numpy array) [M x N x P x 3]: resulting state of the flow field. flow[i,j,k,:3] are the three components of the flow field vector at location (i,j,k) at the resulting time step.
+                P (float numpy array) [M x N x P]: resulting pressure field. flow[i,j,k] is the pressure at location (i,j,k) at the resulting time step.
     '''
     nu = mu / rho_0
     flow[boundary_conditions_mask] = boundary_conditions_values[boundary_conditions_mask]
