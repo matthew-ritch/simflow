@@ -1,8 +1,10 @@
 We model fluid flow using [constant-density incompressible navier-stokes (convective)](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations#Incompressible_flow)
-$$ \frac{\partial u}{\partial t} + (u ⋅ ∇)u - (\frac{\mu}{\rho_{0}}) * ∇^{2}u = -∇(\frac{P}{\rho_{0}}) + g $$
+
+```math
+\frac{\partial u}{\partial t} + (u ⋅ ∇)u - (\frac{\mu}{\rho_{0}}) * ∇^{2}u = -∇(\frac{P}{\rho_{0}}) + g 
+```
 
 simflow.evolve_flow_2d does this for 2D flow fields
-
 
 simflow.evolve_flow_3d does this for 3D flow fields
 
