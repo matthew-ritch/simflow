@@ -9,7 +9,7 @@ from simflow import *
 import time
 
 #PARAMETERS
-nu = .5
+rho_0, = 1
 mu = 1
 g = 0
 dt = .1
@@ -37,7 +37,7 @@ for c in cs:
 def main():
     t0 = time.time()
     for i in range(100000):
-        flow, P = evolve_flow_2d(boundary_conditions_mask, boundary_conditions_values, flow, nu, mu, g, dt)
+        flow, P = evolve_flow_2d(boundary_conditions_mask, boundary_conditions_values, flow, mu, rho_0, g, dt)
         if i % 10000 == 0:
             print(i)
             print(f'{time.time() - t0:.2f} seconds per 10,000 frames')

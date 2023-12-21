@@ -9,8 +9,8 @@ from simflow import *
 import time
 
 #PARAMETERS
-nu = 1.8
 mu = 1
+rho_0 = .5
 g = 0
 dt = .05
 
@@ -50,7 +50,7 @@ def main():
     t0 = time.time()
     # evolve
     for i in range(20000):
-        flow, P = evolve_flow_3d(boundary_conditions_mask, boundary_conditions_values, flow, nu, mu, g, dt)
+        flow, P = evolve_flow_3d(boundary_conditions_mask, boundary_conditions_values, flow, mu, rho_0, g, dt)
         if i % 10 == 0:
             print(f'{(time.time() - t0)/10} seconds per step.')
             t0 = time.time()
